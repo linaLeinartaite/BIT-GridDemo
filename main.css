@@ -1,0 +1,67 @@
+:root{
+    --margin: 5px;
+    --u1: calc((100% -  24 * var(--margin)) / 12); /* 1 unit; 12 columns; 24 margins */
+    --u2: calc((100% -  12 * var(--margin)) / 6);  /* 2 unit; 6 columns; 12 margins */
+    --u3: calc((100% -  8 * var(--margin)) / 4);  /* 3 unit; 4 columns; 8 margins */
+    --u4: calc((100% -  6 * var(--margin)) / 3);  /* 4 unit; 3 columns; 6 margins */
+
+    --u5: calc(100% - var(--u3) - var(--u4) - 6 * var(--margin));  /* 5 unit; 3 columns; 6 margins */
+    --u6: calc((100% -   4 * var(--margin)) / 2);  /* 6 unit; 2 columns; 4 margins */
+    --u7: calc(100% - var(--u5)  - 4 * var(--margin)) ;  /* 7 unit; 2 columns; 4 margins */
+    --u8: calc(100% - var(--u4) - 4 * var(--margin)) ;  /* 8 unit; 2 columns; 4 margins */
+    --u9: calc(100% - var(--u3)  - 4 * var(--margin)) ;  /* 9 unit; 2 columns; 4 margins */
+    --u10: calc(100% - var(--u2) - 4 * var(--margin)) ;  /* 10 unit; 2 columns; 4 margins */
+    --u11: calc(100% - var(--u1) - 4 * var(--margin)) ;  /* 11 unit; 2 columns; 4 margins */
+    --u12: calc(100% - 2 * var(--margin)) ;  /* 12 unit; 1 columns; 2 margins */
+}
+
+body{
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.container{
+    display: inline-block;
+    width: 100%;
+    background-color: pink;
+    text-align: center;
+}
+
+.row{
+    display: inline-block;
+    width: 1200px;
+    /* background-color: pink; */
+}
+
+.units{
+display:inline-block;
+margin: 5px var(--margin);
+float:left;
+background-color: rgb(10, 150, 10);
+color:  rgb(10, 150, 10);
+
+--box-shadow-color: rgb(10, 180, 10);  
+}
+
+.units:hover {
+    box-shadow: 1px 2px 3px var(--box-shadow-color);
+}
+
+
+.units:active{
+    box-shadow: none;
+}
+
+.unit-1 {width: var(--u1)}
+.unit-2 {width: var(--u2)}
+.unit-3{width: var(--u3)}
+.unit-4{width: var(--u4)}
+.unit-5{width: var(--u5)}
+.unit-6{width: var(--u6)}
+.unit-7{width: var(--u7)}
+.unit-8{width: var(--u8)}
+.unit-9{width: var(--u9)}
+.unit-10{width: var(--u10)}
+.unit-11{width: var(--u11)}
+.unit-12{width: var(--u12)}
+
